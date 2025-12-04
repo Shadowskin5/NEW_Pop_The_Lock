@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PaddleMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public int speed = 5;
+
+    Transform _anchor;
+
+
     void Start()
     {
-        
+        _anchor = GameObject.FindGameObjectWithTag("Anchor").transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.RotateAround(_anchor.position, Vector3.forward, speed * Time.deltaTime);
     }
 }
