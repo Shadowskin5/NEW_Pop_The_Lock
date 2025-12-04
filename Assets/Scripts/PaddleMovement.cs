@@ -9,6 +9,8 @@ public class PaddleMovement : MonoBehaviour
 
     Transform _anchor;
 
+    public Direction _direction = Direction.clockwise;
+
 
     void Start()
     {
@@ -17,6 +19,12 @@ public class PaddleMovement : MonoBehaviour
 
     void Update()
     {
-        transform.RotateAround(_anchor.position, Vector3.forward, speed * Time.deltaTime);
+        transform.RotateAround(_anchor.position, Vector3.forward, speed * Time.deltaTime * -(int)_direction);
     }
+}
+
+public enum Direction
+{
+    clockwise = 1,
+    antiClockwise = -1
 }
