@@ -321,7 +321,6 @@ GameObject:
   - component: {fileID: 994629659}
   - component: {fileID: 994629660}
   - component: {fileID: 994629661}
-  - component: {fileID: 994629662}
   m_Layer: 0
   m_Name: Dot
   m_TagString: Untagged
@@ -431,22 +430,6 @@ CircleCollider2D:
   m_Offset: {x: 0.000026226044, y: 0.000069737434}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &994629662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994629658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb3f020327759f44a8aae5ddd34b4ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: dfae28be958ec154fb2ea99b79f9aca5, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1030505683
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +536,7 @@ GameObject:
   - component: {fileID: 1047776559}
   - component: {fileID: 1047776558}
   - component: {fileID: 1047776557}
+  - component: {fileID: 1047776560}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -653,6 +637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faff27883f01fa94cbe779e419cc31c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dotMissed: {fileID: 11400000, guid: dfae28be958ec154fb2ea99b79f9aca5, type: 2}
+  dotScored: {fileID: 11400000, guid: 948ffabc83b22064f9a21e2768c1c5dd, type: 2}
 --- !u!50 &1047776558
 Rigidbody2D:
   serializedVersion: 4
@@ -725,6 +711,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.54}
   m_EdgeRadius: 0
+--- !u!114 &1047776560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047776553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb3f020327759f44a8aae5ddd34b4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: dfae28be958ec154fb2ea99b79f9aca5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1163268372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1193,8 @@ GameObject:
   - component: {fileID: 2024734790}
   - component: {fileID: 2024734792}
   - component: {fileID: 2024734791}
+  - component: {fileID: 2024734794}
+  - component: {fileID: 2024734793}
   m_Layer: 5
   m_Name: Remaining
   m_TagString: Untagged
@@ -1205,7 +1209,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024734789}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1314,6 +1318,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024734789}
   m_CullTransparentMesh: 1
+--- !u!114 &2024734793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024734789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb3f020327759f44a8aae5ddd34b4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 948ffabc83b22064f9a21e2768c1c5dd, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2024734794}
+        m_TargetAssemblyTypeName: ScoreUpdater, Assembly-CSharp
+        m_MethodName: DecrementDots
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2024734794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024734789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1af0dc3e4065e049bc57d46f3e41b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remainingDots: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

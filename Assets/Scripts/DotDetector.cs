@@ -8,6 +8,9 @@ public class DotDetector : MonoBehaviour
 
     bool isRunning = false;
 
+    public GameEvent dotMissed;
+    public GameEvent dotScored;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         currentDot = other.gameObject;
@@ -31,11 +34,11 @@ public class DotDetector : MonoBehaviour
             if (currentDot != null)
             {
                 Destroy(currentDot);
-                Debug.Log("Score++");
+                dotScored.Raise();
             }
             else
             {
-                Debug.Log("Game Over");
+                dotMissed.Raise();
             }
         }
     }
