@@ -235,8 +235,6 @@ GameObject:
   m_Component:
   - component: {fileID: 269293602}
   - component: {fileID: 269293607}
-  - component: {fileID: 269293606}
-  - component: {fileID: 269293605}
   - component: {fileID: 269293604}
   - component: {fileID: 269293603}
   m_Layer: 0
@@ -399,48 +397,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &269293605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269293601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb3f020327759f44a8aae5ddd34b4ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 948ffabc83b22064f9a21e2768c1c5dd, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 269293606}
-        m_TargetAssemblyTypeName: ScoreUpdater, Assembly-CSharp
-        m_MethodName: DecrementDots
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &269293606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269293601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1af0dc3e4065e049bc57d46f3e41b75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  remainingDots: 10
-  displayText: {fileID: 269293603}
 --- !u!222 &269293607
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -960,8 +916,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1145300191}
   - component: {fileID: 1145300196}
-  - component: {fileID: 1145300195}
-  - component: {fileID: 1145300194}
   - component: {fileID: 1145300193}
   - component: {fileID: 1145300192}
   m_Layer: 0
@@ -1124,48 +1078,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1145300194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145300190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb3f020327759f44a8aae5ddd34b4ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 948ffabc83b22064f9a21e2768c1c5dd, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1145300195}
-        m_TargetAssemblyTypeName: ScoreUpdater, Assembly-CSharp
-        m_MethodName: DecrementDots
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1145300195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145300190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1af0dc3e4065e049bc57d46f3e41b75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  remainingDots: 10
-  displayText: {fileID: 1145300192}
 --- !u!222 &1145300196
 CanvasRenderer:
   m_ObjectHideFlags: 0
