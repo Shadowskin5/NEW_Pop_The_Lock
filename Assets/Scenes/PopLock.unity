@@ -422,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 499887107}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -202.03395, y: -609.3224, z: 1.2456726}
+  m_LocalPosition: {x: -202.034, y: -609.3224, z: 1.245673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1374,6 +1374,7 @@ GameObject:
   - component: {fileID: 1327552819}
   - component: {fileID: 1327552820}
   - component: {fileID: 1327552821}
+  - component: {fileID: 1327552822}
   m_Layer: 0
   m_Name: Lock
   m_TagString: Untagged
@@ -1448,6 +1449,34 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: DoAnim
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1327552822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327552818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb3f020327759f44a8aae5ddd34b4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 30e1f656acde51548992f18758ff5775, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1327552820}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DoWinAnim
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1416302529
